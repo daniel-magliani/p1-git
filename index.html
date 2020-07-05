@@ -9,52 +9,33 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script type="text/javascript">
-      function leDados(){
+
+         
           var dadosJson = $.ajax({
             url: 'dados.json',
             dataType: 'json',
             async: false
           }).responseJSON;
-
-          //CADA MODALIDADE
-          var colunas = [];
-          $.each(dadosJson, function(chave,valor){
-            if (!colunas.includes(valor.modalidadeVenda)) {
-              colunas.push(valor.modalidadeVenda);
-            }
-            //if(colunas[0] == valor.Modalidade){console}
-
+        
+        $.each(dadosJson, function(chave,valor){
+            dadosJson = valor.modalidadeVenda;
+            
           });
-          console.log(colunas);
-
-          //QUANTIDADE POR MODALIDADE
-          var dados = [];
-          dados[0] = ['modalidadeVenda','Quantidade'];
-          $.each(colunas, function(indice,conteudo) {
-            var i = 0;
-            $.each(dadosJson, function(chave,valor){
-              if(valor.modalidadeVenda == conteudo){
-                i++;
-              }
-            });
-            //dados[indice] = new Array(2);
-            dados[indice+1] = [conteudo,i];
-            console.log(i);
-
-          });
-        console.log(dados);
-        return dados;
-    }       
-  
-
+ 
+          console.log(dadosJson);
+      
       google.charts.load('current', {'packages':['corechart'],'language':'pt'});
 
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart(){
-
-
-        var dataArray = leDados();
+        var d = dadosJson;
+      var dataArray = [
+                    ['Modalidade', 'Quantidade'],
+                    [d,15],
+                    ['Y',10],
+                    ['W',50],
+                ];
 
   var options = {
           width: 800,
