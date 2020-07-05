@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+      <!-- jQuery JS -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+   
+	<!--Referência da biblioteca Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      function leDados(){
+          var dadosJson = $.ajax({
+            url: 'dados.json',
+            dataType: 'json',
+            async: false
+          }).responseJSON;
+
+          //CADA MODALIDADE
+          var colunas = [];
+          $.each(dadosJson, function(chave,valor){
+            if (!colunas.includes(valor.modalidadeVenda)) {
+              colunas.push(valor.modalidadeVenda);
+            }
+            //if(colunas[0] == valor.Modalidade){console}
+
+          });
+          console.log(colunas);
+
+          //QUANTIDADE POR MODALIDADE
+          var dados = [];
+          dados[0] = ['modalidadeVenda','Quantidade'];
+          $.each(colunas, function(indice,conteudo) {
+            var i = 0;
+            $.each(dadosJson, function(chave,valor){
+              if(valor.modalidadeVenda == conteudo){
+                i++;
+              }
+            });
+            //dados[indice] = new Array(2);
+            dados[indice+1] = [conteudo,i];
+            console.log(i);
+
+          });
+        console.log(dados);
+        return dados;
+    }       
+  
+
+      google.charts.load('current', {'packages':['corechart'],'language':'pt'});
+
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart(){
+
+
+        var dataArray = leDados();
+
+  var options = {
+          width: 800,
+          height: 400,
+         title: 'Modalidades de Venda',
+         vAxis: {gridlines:{count:0,color:'trasnparent'}} ,
+           colors: ['#fcb441']
+
+ 
+
+              };
+
+
+          var data = google.visualization.arrayToDataTable(dataArray);  
+
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      };
+
+
+
+    </script>
+</head>
+<body>
+  <h1>Gráfico 01</h1>
+	 <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+</body>
+</html>
