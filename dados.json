@@ -1,0 +1,94 @@
+
+
+ [
+
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"2º Leilão SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"Leilão SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"2º SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"2º Leilão SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"2º SFI",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"2º Leilão",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+ 	},
+ 	{	
+ 		"endereco":"RUA XYZ, N. 123",
+		"bairro":"TESTE",
+		"descricao":"Casa",
+		"precoOferta":"26549,39",
+		"valorAvaliacao":"196675,25",
+		"porcentagemDesconto":"86.51 ",
+		"modalidadeVenda":"ZZ",
+		"cidade":"TAUBATE",
+		"estado":"SP"
+	}
+
+ ]
